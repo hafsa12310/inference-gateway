@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.env
+*.joblib
+*.pkl
+.pytest_cache/
+.ruff_cache/
+coverage/
