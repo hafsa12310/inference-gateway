@@ -1,8 +1,8 @@
 FROM python:3.12-slim
-COPY --from=ghcr.io/astral-sh/uv:0.5.11 /uv /bin/uv
+COPY --from=ghcr.io/astral-sh/uv:0.13.6 /uv /bin/uv
 WORKDIR /app
 COPY pyproject.toml uv.lock ./
-RUN uv sync --frozen --no-dev
+RUN uv sync --frozen --no-dev --no-install-project
 COPY app ./app
 ENV PATH="/app/.venv/bin:$PATH"
 RUN useradd -m appuser

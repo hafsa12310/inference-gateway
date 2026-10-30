@@ -1,4 +1,5 @@
-import logging, time
+import logging
+import time
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger("autoscaler")
